@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliaçao FiAP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <h2>NAC </h2>
+
+    <p> A universidade FIAP deseja criar um e-commerce para vender produtos personalizados. Para começarmos a primeira
+        entrega, definimos algumas funcionalidades que já possam agregar valor. </p>
+    <p> Cadastros necessários (Criar e Listar além de inserção na base de dados)
+</body>
+</p>
+<ul>
+    <li>
+        Cadastrar fornecedores (Nome, endereço e telefone);
+    </li>
+    <li>
+        Cadastrar clientes (Nome, endereço e telefone);
+    </li>
+    <li>
+        Categoria (Descrição e identificador);
+    </li>
+    <li>
+        Produtos (Descrição, preço, fornecedor e categoria).
+    </li>
+</ul>
+
+<h3>Frontend – Tela de produtos</h3>
+
+<hr>
+
+
+Ao cadastrar os produtos, teremos uma simulação de apresentação por categoria. Exemplo: caso o cliente selecione
+categoria feminina, mostrar apenas produtos cadastrados para esta categoria.
+
+
+<h3> Exemplo </h3>
+<button type="button" class="btn btn-dark" onclick="buscarCategoria('masculino')">masculino</button>
+<button type="button" class="btn btn-dark" onclick="buscarCategoria('masculino')">feminino</button>
+<button type="button" class="btn btn-dark" onclick="buscarCategoria('unissex')">unissex</button>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody id="produto">
+
+    </tbody>
+  </table>
+
+</body>
+
+<script>
+    function buscarCategoria(categoria) {
+        fetch(`https://demo1984205.mockable.io/${categoria}`)
+            .then(response => response.json())
+            .then(data => mostrarResultado(data))
+            .catch(error => alert(error))
+    }
+
+    function mostrarResultado(data) {
+       var produto = document.getElementById('produto');
+       produto.inn  
+
+    }
+</script>
+
+</html>
