@@ -91,6 +91,23 @@
         }
 
     }
+    
+    <script src="https://unpkg.com/blip-chat-widget@1.6.*" type="text/javascript"></script>
+<script>
+    (function () {
+        window.onload = function () {
+          var blipClient = new BlipChat()
+          .withAppKey('cm91dGVybG9jYWxpemF3aGF0c2FwcDpmYmQyMjg5NC1jODEwLTQ0YTktYjc4Yi0yYWNjN2NiOTA5NTM=')
+          .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
+              blipClient.sendMessage({
+                  "type": "text/plain",
+                  "content": "Start"
+              });
+          });
+          blipClient.build();
+        }
+    })();
+</script>
 </script>
 
 </html>
